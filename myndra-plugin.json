@@ -1,0 +1,27 @@
+{
+    "name": "myndra.plugin.json-adapter",
+    "version": "0.1.0",
+    "description": "Structure adapter for JSON files - maps JSON structure onto the graph using tree-sitter",
+    "entry": "./dist/index.js",
+    "author": "Lucas Müller",
+    "category": "reference-example",
+    "permissions": [
+        "editor:register",
+        "filepreview:register",
+        "treesitter:parse",
+        "glyphs:register",
+        "hierarchy:register",
+        "graph:read",
+        "graph:write",
+        "graph:session",
+        "filesystem:read"
+    ],
+    "grammar": {
+        "fileExtensions": [
+            ".json",
+            ".jsonc"
+        ],
+        "wasmPath": "./tree-sitter-json.wasm",
+        "languageName": "json"
+    }
+}
